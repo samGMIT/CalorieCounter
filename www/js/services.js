@@ -3,10 +3,10 @@ angular.module('starter.services', [])
 .factory('Foods', function() {
   var foods = {
 	  food:[{
-		  /*foodName: "Pizza",
+		  foodName: "Pizza",
 		  foodCalories: 850,
 		  added: new Date(),
-		  number: 0*/
+		  number: 0
 	  }]
   };
 	

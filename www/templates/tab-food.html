@@ -6,6 +6,8 @@
 			<b>Food Name: </b>{{item.foodName}}
 			<br/>
 			<b>Calories: </b>{{item.foodCalories}}
+			<br/>
+			<b>Date Added: </b>{{item.added | date: 'dd/MM/yyyy'}} at {{item.added | date:'HH:mm'}}
 		</ion-item>
 	  </ion-list>
 	  
