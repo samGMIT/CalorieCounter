@@ -1,17 +1,17 @@
 <ion-view view-title="Food Eaten">
   <ion-content>
 	  
-		<div class="card">
-			<div class="item item-divider" style="text-align: center">
+	<div class="card">
+		<div class="cardBackground item item-divider" style="text-align: center">
 			Total Calories Consumed
-			</div>
-			<div class="item item-text-wrap">
-			Calories Overall: {{ totalCalories }}
-			</div>
 		</div>
+		<div class="item item-text-wrap">
+			Overall Calories: {{ totalCalories }}
+		</div>
+	</div>
 	  
-	  <ion-list>
-	  	<ion-item class="item-remove-animate item-icon-right" ng-repeat="item in food">
+	<ion-list>
+		<ion-item class="item-remove-animate item-icon-right" ng-repeat="item in food">
 			<b>Food Name: </b>{{item.foodName}}
 			<br/>
 			<b>Calories: </b>{{item.foodCalories}}
@@ -21,7 +21,7 @@
 			<ion-option-button class="button-balanced" ng-click="addFood(item)">ReAdd</ion-option-button>
 			<ion-option-button class="button-assertive"  ng-click="deleteFood(item)">Delete</ion-option-button>
 		</ion-item>
-	  </ion-list>
+	</ion-list>
 	  
   </ion-content>
 </ion-view>

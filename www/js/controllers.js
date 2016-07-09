@@ -17,6 +17,14 @@ angular.module('starter.controllers', [])
 		$scope.details.name = "";
 		$scope.details.calories = null;
 	}
+	
+	$scope.deleteFavoriteFood = function(item){
+		Foods.deleteFavoriteFood(item);
+	}
+	
+	$scope.quickAdd = function(item){
+		Foods.addFood(item.foodName, item.foodCalories);
+	}
 })
 
 .controller('foodCtrl', function($scope, Foods, $interval) {
@@ -39,8 +47,4 @@ angular.module('starter.controllers', [])
 	}
 	
 	
-})
-
-.controller('calculatorCtrl', function($scope, Foods) {
-
 });

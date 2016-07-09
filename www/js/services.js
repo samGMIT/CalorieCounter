@@ -1,21 +1,21 @@
 angular.module('starter.services', [])
 
 .factory('Foods', function() {
-  var foods = {
+	var foods = {
 	  food:[{
-		  foodName: "Pizza",
-		  foodCalories: 850,
+		  foodName: "Rice",
+		  foodCalories: 410,
 		  added: new Date(),
 		  number: 0
 	  }]
 	  ,
 	  favoriteFood:[{
-		  foodName: "Pizza",
-		  foodCalories: 850,
+		  foodName: "Beans",
+		  foodCalories: 250,
 		  added: new Date(),
 		  number: 0
 	  }]
-  };
+	};
 
 	
 	var totalCalories = 0;
@@ -41,6 +41,10 @@ angular.module('starter.services', [])
 		foods.food.splice(foods.food.indexOf(deletedFood), 1);
 	}
 	
+	function deleteFavoriteFood(deletedFood){
+		foods.favoriteFood.splice(foods.food.indexOf(deletedFood), 1);
+	}
+	
   return {
     allFood: function(){
 		return foods.food;
@@ -51,6 +55,7 @@ angular.module('starter.services', [])
 	addFavoriteFood: addFavoriteFood,
 	addFood: addFood,
 	deleteFood: deleteFood,
+	deleteFavoriteFood: deleteFavoriteFood,
 	totalCalories: totalCal
   };
 });

@@ -1,29 +1,39 @@
 <ion-view view-title="Add Food">
-  <ion-content class="padding">
+  <ion-content class="background padding">
     
 	<div class="list">
-	  <label class="item item-input item-floating-label">
-		<span class="input-label">Food</span>
-		<input type="text" placeholder="Food" ng-model="details.name">
-	  </label>
-	  <label class="item item-input item-floating-label">
-		<span class="input-label">Calories</span>
-		<input type="number" placeholder="Calories" ng-model="details.calories">
-	  </label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Food</span>
+			<input type="text" placeholder="Food" ng-model="details.name">
+		</label>
+		<label class="item item-input item-floating-label">
+			<span class="input-label">Calories</span>
+			<input type="number" placeholder="Calories" ng-model="details.calories">
+		</label>
 	</div>
-	 
+
 	<div class="button-bar">
-	  <a class="button button-balanced" ng-click="addFood()">Add Food</a>
-	  <a class="button button-energized" ng-click="addFavoriteFood()">Add to Favorites</a>
+		<a class="button button-balanced" ng-click="addFood()">Add Food</a>
+		<a class="button button-energized" ng-click="addFavoriteFood()">Add to Favorites</a>
 	</div>
-	<br/>
-	  <ion-list>
-	  <ion-item ng-repeat="item in favoriteFoods">
-	  	<b>Food Name: </b>{{item.foodName}}
-		<br/>
-		<b>Calories: </b>{{item.foodCalories}}
-	  </ion-item>
-	  </ion-list>
+	  
+	  
+	<div class="card">
+		<div class="cardBackground item item-divider" style="text-align: center">
+			Favorite Foods
+		</div>
+	</div>
+	  
+	<ion-list>
+		<ion-item class="item-remove-animate item-icon-right" ng-repeat="item in favoriteFoods">
+			<b>Food Name: </b>{{item.foodName}}
+			<br/>
+			<b>Calories: </b>{{item.foodCalories}}
+			<i class="icon ion-chevron-left icon-accessory"></i>
+			<ion-option-button class="button-balanced" ng-click="quickAdd(item)"> Add </ion-option-button>
+			<ion-option-button class="button-assertive"  ng-click="deleteFavoriteFood(item)">Delete</ion-option-button>
+		</ion-item>
+	</ion-list>
 	  
   </ion-content>
 </ion-view>
