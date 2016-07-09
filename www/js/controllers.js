@@ -7,15 +7,23 @@ angular.module('starter.controllers', [])
 	}
 	
 	$scope.addFavoriteFood = function(){
+		if($scope.details.name === ""|| $scope.details.calories === null){
+			
+		}else{
 		Foods.addFavoriteFood($scope.details.name, $scope.details.calories);
+		}
 	}
 	
 	$scope.favoriteFoods = Foods.allFavFood();
 	
 	$scope.addFood = function(){
+		if($scope.details.name === ""|| $scope.details.calories === null){
+			
+		}else{
 		Foods.addFood($scope.details.name, $scope.details.calories)
 		$scope.details.name = "";
 		$scope.details.calories = null;
+		}
 	}
 	
 	$scope.deleteFavoriteFood = function(item){
