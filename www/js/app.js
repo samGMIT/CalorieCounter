@@ -46,16 +46,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       }
     })
     
-
-  .state('tab.calculator', {
-    url: '/calculator',
-    views: {
-      'tab-calculator': {
-        templateUrl: 'templates/tab-calculator.html',
-        controller: 'calculatorCtrl'
-      }
-    }
-  });
+;
 
   $urlRouterProvider.otherwise('/tab/home');
 
