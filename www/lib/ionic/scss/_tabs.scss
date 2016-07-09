@@ -297,7 +297,7 @@ ion-tabs {
   @include tabs-standard-color('tabs-color-active-positive', $positive, $dark);
   @include tabs-standard-color('tabs-color-active-calm', $calm, $dark);
   @include tabs-standard-color('tabs-color-active-assertive', $assertive, $dark);
-  @include tabs-standard-color('tabs-color-active-balanced', $balanced, $dark);
+  @include tabs-standard-color('tabs-color-active-balanced', $balanced, $light);
   @include tabs-standard-color('tabs-color-active-energized',$energized, $dark);
   @include tabs-standard-color('tabs-color-active-royal', $royal, $dark);
   @include tabs-standard-color('tabs-color-active-dark', $dark, $light);
