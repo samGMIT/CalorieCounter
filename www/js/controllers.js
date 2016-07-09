@@ -6,6 +6,11 @@ angular.module('starter.controllers', [])
 		calories: null
 	}
 	
+	$scope.addFavoriteFood = function(){
+		Foods.addFavoriteFood($scope.details.name, $scope.details.calories);
+	}
+	
+	$scope.favoriteFoods = Foods.allFavFood();
 	
 	$scope.addFood = function(){
 		Foods.addFood($scope.details.name, $scope.details.calories)
@@ -15,7 +20,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('foodCtrl', function($scope, Foods, $interval) {
-	$scope.food = Foods.all();
+	$scope.food = Foods.allFood();
 	$scope.totalCalories = 0;
 	
 	$interval(findCalories, 1000);

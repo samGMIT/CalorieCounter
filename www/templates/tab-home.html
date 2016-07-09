@@ -12,10 +12,18 @@
 	  </label>
 	</div>
 	 
-	<button class="button button-block button-large button-balanced" ng-click="addFood()">
-		Add Food
-	</button>
-	  
+	<div class="button-bar">
+	  <a class="button button-balanced" ng-click="addFood()">Add Food</a>
+	  <a class="button button-energized" ng-click="addFavoriteFood()">Add to Favorites</a>
+	</div>
+	<br/>
+	  <ion-list>
+	  <ion-item ng-repeat="item in favoriteFoods">
+	  	<b>Food Name: </b>{{item.foodName}}
+		<br/>
+		<b>Calories: </b>{{item.foodCalories}}
+	  </ion-item>
+	  </ion-list>
 	  
   </ion-content>
 </ion-view>

@@ -17,7 +17,7 @@
 			<b>Calories: </b>{{item.foodCalories}}
 			<br/>
 			<b>Date Added: </b>{{item.added | date: 'dd/MM/yyyy'}} at {{item.added | date:'HH:mm'}}
-			<i class="icon icon-chevron-right icon-accessory"></i>
+			<i class="icon ion-chevron-left icon-accessory"></i>
 			<ion-option-button class="button-balanced" ng-click="addFood(item)">ReAdd</ion-option-button>
 			<ion-option-button class="button-assertive"  ng-click="deleteFood(item)">Delete</ion-option-button>
 		</ion-item>

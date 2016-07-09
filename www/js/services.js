@@ -8,6 +8,13 @@ angular.module('starter.services', [])
 		  added: new Date(),
 		  number: 0
 	  }]
+	  ,
+	  favoriteFood:[{
+		  foodName: "Pizza",
+		  foodCalories: 850,
+		  added: new Date(),
+		  number: 0
+	  }]
   };
 
 	
@@ -26,14 +33,22 @@ angular.module('starter.services', [])
 		foods.food.push({foodName: name, foodCalories: calories, added: new Date(), number: foods.food.length+1});
 	}
 	
+	function addFavoriteFood(name, calories){
+		foods.favoriteFood.push({foodName: name, foodCalories: calories, added: new Date(), number: foods.favoriteFood.length+1});
+	}
+	
 	function deleteFood(deletedFood){
 		foods.food.splice(foods.food.indexOf(deletedFood), 1);
 	}
 	
   return {
-    all: function(){
+    allFood: function(){
 		return foods.food;
 	},
+	allFavFood: function(){
+		return foods.favoriteFood;
+	},
+	addFavoriteFood: addFavoriteFood,
 	addFood: addFood,
 	deleteFood: deleteFood,
 	totalCalories: totalCal
