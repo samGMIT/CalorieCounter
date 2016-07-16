@@ -1,6 +1,8 @@
 <ion-view view-title="Food Eaten">
   <ion-content>
+	  <!--Reference: buttons and all other css components are taken from the Ionic CSS components page-->
 	  
+	<!--This card will show us the total calories by binding totalCalories from controller-->  
 	<div class="card">
 		<div class="cardBackground item item-divider" style="text-align: center">
 			Total Calories Consumed
@@ -10,6 +12,7 @@
 		</div>
 	</div>
 	  
+	<!--An ionic list with repeated items for each object in the array, it can slide to the side to re-add or delete an item-->  
 	<ion-list>
 		<ion-item class="item-remove-animate item-icon-right" ng-repeat="item in food">
 			<b>Food Name: </b>{{item.foodName}}

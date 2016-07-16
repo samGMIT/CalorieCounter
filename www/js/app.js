@@ -1,4 +1,3 @@
-
 angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
@@ -25,7 +24,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: 'templates/tabs.html'
   })
 
-
+  //Tab for home scren
   .state('tab.home', {
     url: '/home',
     views: {
@@ -36,6 +35,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   })
 
+  //Tab for listing the food we have consumed
   .state('tab.food', {
       url: '/food',
       views: {

@@ -1,6 +1,8 @@
 <ion-view view-title="Add Food">
   <ion-content class="background padding">
-    
+   	<!--Reference: buttons and all other css components are taken from the Ionic CSS components page-->
+	  
+	<!--2 forms that are modeled to read in the name and calories of a food, it will make sure calories are entered in numbers-->
 	<div class="list">
 		<label class="item item-input item-floating-label">
 			<span class="input-label">Food</span>
@@ -11,19 +13,21 @@
 			<input type="number" placeholder="Calories" ng-model="details.calories">
 		</label>
 	</div>
-
+	  
+	<!--Two buttons to either add food or add a favorite food-->
 	<div class="button-bar">
 		<a class="button button-balanced" ng-click="addFood()">Add Food</a>
 		<a class="button button-energized" ng-click="addFavoriteFood()">Add to Favorites</a>
 	</div>
 	  
-	  
+	<!--A card used as a header for favorite foods-->  
 	<div class="card">
 		<div class="cardBackground item item-divider" style="text-align: center">
 			Favorite Foods
 		</div>
 	</div>
 	  
+	<!--Ionic list to repeat for every favorite food in the object array, can slide to add that food or delete from the favorites list-->
 	<ion-list>
 		<ion-item class="item-remove-animate item-icon-right" ng-repeat="item in favoriteFoods">
 			<b>Food Name: </b>{{item.foodName}}
